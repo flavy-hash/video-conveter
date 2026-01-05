@@ -6,6 +6,7 @@ class VideoToAudioConverter {
     private $maxFileSize = 500 * 1024 * 1024; // 500MB
     private $uploadDir = 'uploads/';
     private $outputDir = 'converted/';
+    private $logDir = 'logs/';
     
     public function __construct($ffmpegPath = 'ffmpeg') {
         $this->ffmpegPath = $ffmpegPath;
@@ -19,43 +20,56 @@ class VideoToAudioConverter {
         if (!file_exists($this->outputDir)) {
             mkdir($this->outputDir, 0777, true);
         }
+        if (!file_exists($this->logDir)) {
+            mkdir($this->logDir, 0777, true);
+        }
     }
     
     public function convert($videoFile, $outputFormat = 'mp3', $bitrate = '192k') {
+        $uniqueId = uniqid();
+        $logFileName = $uniqueId . '.log';
+        $logFilePath = $this->logDir . $logFileName;
+
         try {
             // Validate input
             $this->validateFile($videoFile);
             
             // Generate unique filenames
-            $uniqueId = uniqid();
             $uploadedFilePath = $this->uploadDir . $uniqueId . '_' . basename($videoFile['name']);
             $outputFileName = $uniqueId . '_converted.' . $outputFormat;
             $outputFilePath = $this->outputDir . $outputFileName;
             
             // Upload video file
             if (!move_uploaded_file($videoFile['tmp_name'], $uploadedFilePath)) {
+                $this->writeLog($logFilePath, "Failed to move uploaded file: " . print_r($videoFile, true));
                 throw new Exception("Failed to upload file.");
             }
             
             // Convert video to audio
             $command = $this->buildCommand($uploadedFilePath, $outputFilePath, $outputFormat, $bitrate);
-            $this->executeConversion($command, $outputFilePath);
+            $this->executeConversion($command, $outputFilePath, $logFilePath);
             
             // Clean up uploaded video file
             unlink($uploadedFilePath);
+
+            $this->writeLog($logFilePath, "Conversion successful: output={$outputFilePath}");
             
             return [
                 'success' => true,
                 'output_file' => $outputFileName,
                 'file_path' => $outputFilePath,
                 'download_url' => $this->outputDir . $outputFileName,
-                'format' => $outputFormat
+                'format' => $outputFormat,
+                'log_file' => $logFileName
             ];
             
         } catch (Exception $e) {
+            $this->writeLog($logFilePath, "Error: " . $e->getMessage() . "\nTrace: " . $e->getTraceAsString());
             return [
                 'success' => false,
-                'error' => $e->getMessage()
+                'error' => $e->getMessage(),
+                'error_code' => 'CONVERSION_FAILED',
+                'log_file' => $logFileName
             ];
         }
     }
@@ -109,23 +123,33 @@ class VideoToAudioConverter {
         return $commands['mp3'];
     }
     
-    private function executeConversion($command, $outputFilePath) {
+    private function executeConversion($command, $outputFilePath, $logFilePath) {
         $output = [];
         $returnCode = 0;
         
         exec($command, $output, $returnCode);
         
+        // Write log (command and output)
+        $logContent = "COMMAND: " . $command . "\n\nOUTPUT:\n" . implode("\n", $output) . "\n\nRETURN_CODE: " . $returnCode . "\n";
+        $this->writeLog($logFilePath, $logContent);
+        
         if ($returnCode !== 0) {
-            throw new Exception("Conversion failed: " . implode("\n", $output));
+            throw new Exception("Conversion failed. See log: " . $logFilePath);
         }
         
         if (!file_exists($outputFilePath)) {
-            throw new Exception("Output file was not created.");
+            $this->writeLog($logFilePath, "Output file missing after conversion.\n");
+            throw new Exception("Output file was not created. See log: " . $logFilePath);
         }
     }
     
     public function getSupportedFormats() {
         return ['mp3', 'wav', 'ogg', 'aac', 'm4a'];
+    }
+
+    private function writeLog($path, $content) {
+        $time = date('c');
+        file_put_contents($path, "[$time] " . $content . "\n", FILE_APPEND | LOCK_EX);
     }
     
     public function setMaxFileSize($sizeInMB) {

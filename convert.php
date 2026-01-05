@@ -39,12 +39,26 @@ try {
         $result['file_size'] = formatFileSize($fileSize);
     }
     
-    echo json_encode($result);
-    
+    if (isset($result['success']) && $result['success'] === true) {
+        echo json_encode($result);
+    } else {
+        echo json_encode([
+            'success' => false,
+            'error' => [
+                'code' => $result['error_code'] ?? 'CONVERSION_FAILED',
+                'message' => $result['error'] ?? 'An error occurred.'
+            ],
+            'log_file' => $result['log_file'] ?? null
+        ]);
+    }
+
 } catch (Exception $e) {
     echo json_encode([
         'success' => false,
-        'error' => $e->getMessage()
+        'error' => [
+            'code' => 'SERVER_ERROR',
+            'message' => $e->getMessage()
+        ]
     ]);
 }
 

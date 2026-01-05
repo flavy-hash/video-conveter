@@ -1,0 +1,51 @@
+[2026-01-05T09:11:50+01:00] COMMAND: ffmpeg -i "uploads/695b723f62a15_JUBED-RUWA II FT Oxlade x Yemi Alade x Prince Mk Baagi.mp4" -acodec aac -ab 192k "converted/695b723f62a15_converted.aac" 2>&1
+
+OUTPUT:
+ffmpeg version 2025-12-31-git-38e89fe502-full_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-cairo --enable-fontconfig --enable-iconv --enable-gnutls --enable-lcms2 --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-libdvdnav --enable-libdvdread --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-liboapv --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libsvtjpegxs --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-openal --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint --enable-whisper
+  libavutil      60. 21.102 / 60. 21.102
+  libavcodec     62. 23.102 / 62. 23.102
+  libavformat    62.  8.102 / 62.  8.102
+  libavdevice    62.  2.100 / 62.  2.100
+  libavfilter    11. 10.101 / 11. 10.101
+  libswscale      9.  3.100 /  9.  3.100
+  libswresample   6.  2.100 /  6.  2.100
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000015884b18640] st: 1 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000015884b18640] st: 1 edit list 1 Cannot find an index entry before timestamp: 0.
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'uploads/695b723f62a15_JUBED-RUWA II FT Oxlade x Yemi Alade x Prince Mk Baagi.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 1
+    compatible_brands: isomiso2avc1mp41
+    creation_time   : 2025-12-13T22:43:05.000000Z
+  Duration: 00:03:03.21, start: 0.000000, bitrate: 321 kb/s
+  Stream #0:0[0x1](und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 480x480 [SAR 1:1 DAR 1:1], 190 kb/s, 24 fps, 24 tbr, 12288 tbn (default)
+    Metadata:
+      creation_time   : 2025-12-13T22:43:05.000000Z
+      handler_name    : ISO Media file produced by Google Inc.
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 127 kb/s (default)
+    Metadata:
+      creation_time   : 2025-12-13T22:42:56.000000Z
+      handler_name    : ISO Media file produced by Google Inc.
+Stream mapping:
+  Stream #0:1 -> #0:0 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+Output #0, adts, to 'converted/695b723f62a15_converted.aac':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 1
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf62.8.102
+  Stream #0:0(und): Audio: aac (LC), 44100 Hz, stereo, fltp, 192 kb/s (default)
+    Metadata:
+      encoder         : Lavc62.23.102 aac
+      creation_time   : 2025-12-13T22:42:56.000000Z
+      handler_name    : ISO Media file produced by Google Inc.
+size=     256KiB time=00:00:14.48 bitrate= 144.7kbits/s speed=28.2x elapsed=0:00:00.51    size=     512KiB time=00:00:27.93 bitrate= 150.2kbits/s speed=27.1x elapsed=0:00:01.03    size=    1024KiB time=00:00:42.39 bitrate= 197.8kbits/s speed=27.3x elapsed=0:00:01.55    size=    1280KiB time=00:00:56.56 bitrate= 185.4kbits/s speed=27.3x elapsed=0:00:02.06    size=    1536KiB time=00:01:09.86 bitrate= 180.1kbits/s speed=27.1x elapsed=0:00:02.58    size=    1792KiB time=00:01:23.03 bitrate= 176.8kbits/s speed=26.8x elapsed=0:00:03.09    size=    2304KiB time=00:01:38.08 bitrate= 192.4kbits/s speed=27.1x elapsed=0:00:03.61    size=    2560KiB time=00:01:51.24 bitrate= 188.5kbits/s speed=26.9x elapsed=0:00:04.13    size=    2816KiB time=00:02:05.52 bitrate= 183.8kbits/s speed=  27x elapsed=0:00:04.65    size=    3328KiB time=00:02:19.57 bitrate= 195.3kbits/s speed=  27x elapsed=0:00:05.16    size=    3584KiB time=00:02:33.87 bitrate= 190.8kbits/s speed=27.1x elapsed=0:00:05.67    size=    4096KiB time=00:02:50.31 bitrate= 197.0kbits/s speed=27.5x elapsed=0:00:06.18    [out#0/adts @ 0000015884fc1a40] video:0KiB audio:4371KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 1.233974%
+size=    4425KiB time=00:03:03.20 bitrate= 197.9kbits/s speed=  28x elapsed=0:00:06.54
+[aac @ 0000015884fc2a80] Qavg: 544.936
+
+RETURN_CODE: 0
+
+[2026-01-05T09:11:50+01:00] Conversion successful: output=converted/695b723f62a15_converted.aac

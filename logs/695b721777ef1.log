@@ -1,0 +1,121 @@
+[2026-01-05T09:11:35+01:00] COMMAND: ffmpeg -i "uploads/695b721777ef1_JUBED-RUWA II FT Oxlade x Yemi Alade x Prince Mk Baagi.mp4" -acodec libvorbis -ab 192k "converted/695b721777ef1_converted.ogg" 2>&1
+
+OUTPUT:
+ffmpeg version 2025-12-31-git-38e89fe502-full_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-cairo --enable-fontconfig --enable-iconv --enable-gnutls --enable-lcms2 --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-libdvdnav --enable-libdvdread --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-liboapv --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libsvtjpegxs --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-openal --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint --enable-whisper
+  libavutil      60. 21.102 / 60. 21.102
+  libavcodec     62. 23.102 / 62. 23.102
+  libavformat    62.  8.102 / 62.  8.102
+  libavdevice    62.  2.100 / 62.  2.100
+  libavfilter    11. 10.101 / 11. 10.101
+  libswscale      9.  3.100 /  9.  3.100
+  libswresample   6.  2.100 /  6.  2.100
+[mov,mp4,m4a,3gp,3g2,mj2 @ 000002356f897e40] st: 1 edit list: 1 Missing key frame while searching for timestamp: 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 000002356f897e40] st: 1 edit list 1 Cannot find an index entry before timestamp: 0.
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'uploads/695b721777ef1_JUBED-RUWA II FT Oxlade x Yemi Alade x Prince Mk Baagi.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 1
+    compatible_brands: isomiso2avc1mp41
+    creation_time   : 2025-12-13T22:43:05.000000Z
+  Duration: 00:03:03.21, start: 0.000000, bitrate: 321 kb/s
+  Stream #0:0[0x1](und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 480x480 [SAR 1:1 DAR 1:1], 190 kb/s, 24 fps, 24 tbr, 12288 tbn (default)
+    Metadata:
+      creation_time   : 2025-12-13T22:43:05.000000Z
+      handler_name    : ISO Media file produced by Google Inc.
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 127 kb/s (default)
+    Metadata:
+      creation_time   : 2025-12-13T22:42:56.000000Z
+      handler_name    : ISO Media file produced by Google Inc.
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> theora (libtheora))
+  Stream #0:1 -> #0:1 (aac (native) -> vorbis (libvorbis))
+Press [q] to stop, [?] for help
+[h264 @ 000002356f9107c0] Late SEI is not implemented. Update your FFmpeg version to the newest one from Git. If the problem still occurs, it means that your file has a feature which has not been implemented.
+[h264 @ 000002356f9107c0] If you want to help, upload a sample of this file to https://streams.videolan.org/upload/ and contact the ffmpeg-devel mailing list. (ffmpeg-devel@ffmpeg.org)
+Output #0, ogg, to 'converted/695b721777ef1_converted.ogg':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 1
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf62.8.102
+  Stream #0:0(und): Video: theora, yuv420p(tv, bt709, progressive), 480x480 [SAR 1:1 DAR 1:1], q=2-31, 200 kb/s, 24 fps, 24 tbn (default)
+    Metadata:
+      encoder         : Lavc62.23.102 libtheora
+      creation_time   : 2025-12-13T22:43:05.000000Z
+      handler_name    : ISO Media file produced by Google Inc.
+      major_brand     : isom
+      minor_version   : 1
+      compatible_brands: isomiso2avc1mp41
+  Stream #0:1(und): Audio: vorbis, 44100 Hz, stereo, fltp, 192 kb/s (default)
+    Metadata:
+      encoder         : Lavc62.23.102 libvorbis
+      creation_time   : 2025-12-13T22:42:56.000000Z
+      handler_name    : ISO Media file produced by Google Inc.
+      major_brand     : isom
+      minor_version   : 1
+      compatible_brands: isomiso2avc1mp41
+[libvorbis @ 000002356fe30cc0] Queue input is backward in time
+frame=   56 fps=0.0 q=-0.0 size=      29KiB time=00:00:01.80 bitrate= 129.8kbits/s speed=3.46x elapsed=0:00:00.52    frame=  115 fps=111 q=-0.0 size=     165KiB time=00:00:04.20 bitrate= 321.0kbits/s speed=4.04x elapsed=0:00:01.04    [h264 @ 000002356fce8980] Late SEI is not implemented. Update your FFmpeg version to the newest one from Git. If the problem still occurs, it means that your file has a feature which has not been implemented.
+[h264 @ 000002356fce8980] If you want to help, upload a sample of this file to https://streams.videolan.org/upload/ and contact the ffmpeg-devel mailing list. (ffmpeg-devel@ffmpeg.org)
+frame=  173 fps=111 q=-0.0 size=     256KiB time=00:00:06.63 bitrate= 316.0kbits/s speed=4.27x elapsed=0:00:01.55    frame=  230 fps=111 q=-0.0 size=     256KiB time=00:00:09.00 bitrate= 232.9kbits/s speed=4.36x elapsed=0:00:02.06    [h264 @ 000002356fe34080] Late SEI is not implemented. Update your FFmpeg version to the newest one from Git. If the problem still occurs, it means that your file has a feature which has not been implemented.
+[h264 @ 000002356fe34080] If you want to help, upload a sample of this file to https://streams.videolan.org/upload/ and contact the ffmpeg-devel mailing list. (ffmpeg-devel@ffmpeg.org)
+frame=  286 fps=111 q=-0.0 size=     256KiB time=00:00:11.35 bitrate= 184.6kbits/s speed=4.41x elapsed=0:00:02.57    frame=  346 fps=111 q=-0.0 size=     512KiB time=00:00:13.85 bitrate= 302.8kbits/s speed=4.46x elapsed=0:00:03.10    frame=  407 fps=112 q=-0.0 size=     512KiB time=00:00:16.43 bitrate= 255.2kbits/s speed=4.54x elapsed=0:00:03.62    [h264 @ 000002356fedc240] Late SEI is not implemented. Update your FFmpeg version to the newest one from Git. If the problem still occurs, it means that your file has a feature which has not been implemented.
+[h264 @ 000002356fedc240] If you want to help, upload a sample of this file to https://streams.videolan.org/upload/ and contact the ffmpeg-devel mailing list. (ffmpeg-devel@ffmpeg.org)
+frame=  468 fps=113 q=-0.0 size=     768KiB time=00:00:18.96 bitrate= 331.7kbits/s speed=4.58x elapsed=0:00:04.13    frame=  531 fps=114 q=-0.0 size=     768KiB time=00:00:21.57 bitrate= 291.6kbits/s speed=4.64x elapsed=0:00:04.65    [h264 @ 000002356fce9840] Late SEI is not implemented. Update your FFmpeg version to the newest one from Git. If the problem still occurs, it means that your file has a feature which has not been implemented.
+[h264 @ 000002356fce9840] If you want to help, upload a sample of this file to https://streams.videolan.org/upload/ and contact the ffmpeg-devel mailing list. (ffmpeg-devel@ffmpeg.org)
+frame=  593 fps=115 q=-0.0 size=    1024KiB time=00:00:24.15 bitrate= 347.3kbits/s speed=4.67x elapsed=0:00:05.16    frame=  654 fps=115 q=-0.0 size=    1024KiB time=00:00:26.66 bitrate= 314.6kbits/s speed=4.69x elapsed=0:00:05.68    frame=  718 fps=116 q=-0.0 size=    1024KiB time=00:00:29.30 bitrate= 286.3kbits/s speed=4.73x elapsed=0:00:06.19    [h264 @ 000002356fe32300] Late SEI is not implemented. Update your FFmpeg version to the newest one from Git. If the problem still occurs, it means that your file has a feature which has not been implemented.
+[h264 @ 000002356fe32300] If you want to help, upload a sample of this file to https://streams.videolan.org/upload/ and contact the ffmpeg-devel mailing list. (ffmpeg-devel@ffmpeg.org)
+frame=  780 fps=116 q=-0.0 size=    1280KiB time=00:00:31.92 bitrate= 328.5kbits/s speed=4.75x elapsed=0:00:06.71    frame=  839 fps=116 q=-0.0 size=    1280KiB time=00:00:34.40 bitrate= 304.8kbits/s speed=4.77x elapsed=0:00:07.21    [h264 @ 000002356fce8600] Late SEI is not implemented. Update your FFmpeg version to the newest one from Git. If the problem still occurs, it means that your file has a feature which has not been implemented.
+[h264 @ 000002356fce8600] If you want to help, upload a sample of this file to https://streams.videolan.org/upload/ and contact the ffmpeg-devel mailing list. (ffmpeg-devel@ffmpeg.org)
+frame=  905 fps=117 q=-0.0 size=    1536KiB time=00:00:37.14 bitrate= 338.7kbits/s speed= 4.8x elapsed=0:00:07.74    frame=  981 fps=119 q=-0.0 size=    1536KiB time=00:00:40.29 bitrate= 312.2kbits/s speed=4.88x elapsed=0:00:08.25    [h264 @ 000002356fce9fc0] Late SEI is not implemented. Update your FFmpeg version to the newest one from Git. If the problem still occurs, it means that your file has a feature which has not been implemented.
+[h264 @ 000002356fce9fc0] If you want to help, upload a sample of this file to https://streams.videolan.org/upload/ and contact the ffmpeg-devel mailing list. (ffmpeg-devel@ffmpeg.org)
+frame= 1060 fps=121 q=-0.0 size=    1792KiB time=00:00:43.63 bitrate= 336.4kbits/s speed=4.97x elapsed=0:00:08.77    frame= 1140 fps=123 q=-0.0 size=    2048KiB time=00:00:46.93 bitrate= 357.5kbits/s speed=5.06x elapsed=0:00:09.28    [h264 @ 000002356f9107c0] Late SEI is not implemented. Update your FFmpeg version to the newest one from Git. If the problem still occurs, it means that your file has a feature which has not been implemented.
+[h264 @ 000002356f9107c0] If you want to help, upload a sample of this file to https://streams.videolan.org/upload/ and contact the ffmpeg-devel mailing list. (ffmpeg-devel@ffmpeg.org)
+frame= 1224 fps=125 q=-0.0 size=    2048KiB time=00:00:50.47 bitrate= 332.4kbits/s speed=5.15x elapsed=0:00:09.80    frame= 1306 fps=127 q=-0.0 size=    2304KiB time=00:00:53.88 bitrate= 350.3kbits/s speed=5.22x elapsed=0:00:10.31    [h264 @ 000002356fce8980] Late SEI is not implemented. Update your FFmpeg version to the newest one from Git. If the problem still occurs, it means that your file has a feature which has not been implemented.
+[h264 @ 000002356fce8980] If you want to help, upload a sample of this file to https://streams.videolan.org/upload/ and contact the ffmpeg-devel mailing list. (ffmpeg-devel@ffmpeg.org)
+frame= 1390 fps=128 q=-0.0 size=    2560KiB time=00:00:57.34 bitrate= 365.7kbits/s speed=5.29x elapsed=0:00:10.84    frame= 1467 fps=129 q=-0.0 size=    2560KiB time=00:01:00.56 bitrate= 346.3kbits/s speed=5.34x elapsed=0:00:11.34    [h264 @ 000002356fe34080] Late SEI is not implemented. Update your FFmpeg version to the newest one from Git. If the problem still occurs, it means that your file has a feature which has not been implemented.
+[h264 @ 000002356fe34080] If you want to help, upload a sample of this file to https://streams.videolan.org/upload/ and contact the ffmpeg-devel mailing list. (ffmpeg-devel@ffmpeg.org)
+frame= 1550 fps=131 q=-0.0 size=    2816KiB time=00:01:04.03 bitrate= 360.2kbits/s speed=5.39x elapsed=0:00:11.87    [h264 @ 000002356fedc240] Late SEI is not implemented. Update your FFmpeg version to the newest one from Git. If the problem still occurs, it means that your file has a feature which has not been implemented.
+[h264 @ 000002356fedc240] If you want to help, upload a sample of this file to https://streams.videolan.org/upload/ and contact the ffmpeg-devel mailing list. (ffmpeg-devel@ffmpeg.org)
+frame= 1632 fps=132 q=-0.0 size=    2816KiB time=00:01:07.45 bitrate= 342.0kbits/s speed=5.45x elapsed=0:00:12.37    frame= 1716 fps=133 q=-0.0 size=    3072KiB time=00:01:10.98 bitrate= 354.5kbits/s speed= 5.5x elapsed=0:00:12.90    [h264 @ 000002356fce9840] Late SEI is not implemented. Update your FFmpeg version to the newest one from Git. If the problem still occurs, it means that your file has a feature which has not been implemented.
+[h264 @ 000002356fce9840] If you want to help, upload a sample of this file to https://streams.videolan.org/upload/ and contact the ffmpeg-devel mailing list. (ffmpeg-devel@ffmpeg.org)
+frame= 1797 fps=134 q=-0.0 size=    3328KiB time=00:01:14.32 bitrate= 366.8kbits/s speed=5.54x elapsed=0:00:13.40    frame= 1880 fps=135 q=-0.0 size=    3328KiB time=00:01:17.80 bitrate= 350.4kbits/s speed=5.58x elapsed=0:00:13.93    [h264 @ 000002356fe32300] Late SEI is not implemented. Update your FFmpeg version to the newest one from Git. If the problem still occurs, it means that your file has a feature which has not been implemented.
+[h264 @ 000002356fe32300] If you want to help, upload a sample of this file to https://streams.videolan.org/upload/ and contact the ffmpeg-devel mailing list. (ffmpeg-devel@ffmpeg.org)
+frame= 1961 fps=136 q=-0.0 size=    3584KiB time=00:01:21.18 bitrate= 361.7kbits/s speed=5.62x elapsed=0:00:14.44    frame= 2044 fps=137 q=-0.0 size=    3584KiB time=00:01:24.58 bitrate= 347.1kbits/s speed=5.65x elapsed=0:00:14.96    [h264 @ 000002356fce8600] Late SEI is not implemented. Update your FFmpeg version to the newest one from Git. If the problem still occurs, it means that your file has a feature which has not been implemented.
+[h264 @ 000002356fce8600] If you want to help, upload a sample of this file to https://streams.videolan.org/upload/ and contact the ffmpeg-devel mailing list. (ffmpeg-devel@ffmpeg.org)
+frame= 2124 fps=137 q=-0.0 size=    3840KiB time=00:01:27.99 bitrate= 357.5kbits/s speed=5.69x elapsed=0:00:15.47    frame= 2206 fps=138 q=-0.0 size=    4096KiB time=00:01:31.60 bitrate= 366.3kbits/s speed=5.73x elapsed=0:00:15.99    [h264 @ 000002356fce9fc0] Late SEI is not implemented. Update your FFmpeg version to the newest one from Git. If the problem still occurs, it means that your file has a feature which has not been implemented.
+[h264 @ 000002356fce9fc0] If you want to help, upload a sample of this file to https://streams.videolan.org/upload/ and contact the ffmpeg-devel mailing list. (ffmpeg-devel@ffmpeg.org)
+frame= 2269 fps=137 q=-0.0 size=    4096KiB time=00:01:33.99 bitrate= 357.0kbits/s speed=5.69x elapsed=0:00:16.50    frame= 2337 fps=137 q=-0.0 size=    4096KiB time=00:01:36.85 bitrate= 346.5kbits/s speed=5.69x elapsed=0:00:17.02    [h264 @ 000002356f9107c0] Late SEI is not implemented. Update your FFmpeg version to the newest one from Git. If the problem still occurs, it means that your file has a feature which has not been implemented.
+[h264 @ 000002356f9107c0] If you want to help, upload a sample of this file to https://streams.videolan.org/upload/ and contact the ffmpeg-devel mailing list. (ffmpeg-devel@ffmpeg.org)
+frame= 2402 fps=137 q=-0.0 size=    4352KiB time=00:01:39.52 bitrate= 358.2kbits/s speed=5.67x elapsed=0:00:17.54    frame= 2467 fps=137 q=-0.0 size=    4608KiB time=00:01:42.29 bitrate= 369.0kbits/s speed=5.66x elapsed=0:00:18.05    [h264 @ 000002356fce8980] Late SEI is not implemented. Update your FFmpeg version to the newest one from Git. If the problem still occurs, it means that your file has a feature which has not been implemented.
+[h264 @ 000002356fce8980] If you want to help, upload a sample of this file to https://streams.videolan.org/upload/ and contact the ffmpeg-devel mailing list. (ffmpeg-devel@ffmpeg.org)
+frame= 2539 fps=137 q=-0.0 size=    4608KiB time=00:01:45.51 bitrate= 357.8kbits/s speed=5.68x elapsed=0:00:18.56    frame= 2604 fps=136 q=-0.0 size=    4608KiB time=00:01:47.97 bitrate= 349.6kbits/s speed=5.66x elapsed=0:00:19.08    frame= 2676 fps=136 q=-0.0 size=    4864KiB time=00:01:50.95 bitrate= 359.1kbits/s speed=5.66x elapsed=0:00:19.60    [h264 @ 000002356fe34080] Late SEI is not implemented. Update your FFmpeg version to the newest one from Git. If the problem still occurs, it means that your file has a feature which has not been implemented.
+[h264 @ 000002356fe34080] If you want to help, upload a sample of this file to https://streams.videolan.org/upload/ and contact the ffmpeg-devel mailing list. (ffmpeg-devel@ffmpeg.org)
+frame= 2755 fps=137 q=-0.0 size=    5120KiB time=00:01:54.23 bitrate= 367.2kbits/s speed=5.68x elapsed=0:00:20.11    [h264 @ 000002356fedc240] Late SEI is not implemented. Update your FFmpeg version to the newest one from Git. If the problem still occurs, it means that your file has a feature which has not been implemented.
+[h264 @ 000002356fedc240] If you want to help, upload a sample of this file to https://streams.videolan.org/upload/ and contact the ffmpeg-devel mailing list. (ffmpeg-devel@ffmpeg.org)
+frame= 2839 fps=138 q=-0.0 size=    5120KiB time=00:01:57.78 bitrate= 356.1kbits/s speed=5.71x elapsed=0:00:20.63    frame= 2918 fps=138 q=-0.0 size=    5376KiB time=00:02:01.09 bitrate= 363.7kbits/s speed=5.73x elapsed=0:00:21.14    [h264 @ 000002356fce9840] Late SEI is not implemented. Update your FFmpeg version to the newest one from Git. If the problem still occurs, it means that your file has a feature which has not been implemented.
+[h264 @ 000002356fce9840] If you want to help, upload a sample of this file to https://streams.videolan.org/upload/ and contact the ffmpeg-devel mailing list. (ffmpeg-devel@ffmpeg.org)
+frame= 3001 fps=139 q=-0.0 size=    5376KiB time=00:02:04.44 bitrate= 353.9kbits/s speed=5.74x elapsed=0:00:21.66    frame= 3072 fps=139 q=-0.0 size=    5632KiB time=00:02:07.44 bitrate= 362.0kbits/s speed=5.75x elapsed=0:00:22.17    [h264 @ 000002356fe32300] Late SEI is not implemented. Update your FFmpeg version to the newest one from Git. If the problem still occurs, it means that your file has a feature which has not been implemented.
+[h264 @ 000002356fe32300] If you want to help, upload a sample of this file to https://streams.videolan.org/upload/ and contact the ffmpeg-devel mailing list. (ffmpeg-devel@ffmpeg.org)
+frame= 3144 fps=139 q=-0.0 size=    5632KiB time=00:02:10.45 bitrate= 353.7kbits/s speed=5.75x elapsed=0:00:22.69    frame= 3215 fps=138 q=-0.0 size=    5888KiB time=00:02:13.40 bitrate= 361.6kbits/s speed=5.75x elapsed=0:00:23.21    [h264 @ 000002356fce8600] Late SEI is not implemented. Update your FFmpeg version to the newest one from Git. If the problem still occurs, it means that your file has a feature which has not been implemented.
+[h264 @ 000002356fce8600] If you want to help, upload a sample of this file to https://streams.videolan.org/upload/ and contact the ffmpeg-devel mailing list. (ffmpeg-devel@ffmpeg.org)
+frame= 3280 fps=138 q=-0.0 size=    5888KiB time=00:02:16.13 bitrate= 354.3kbits/s speed=5.74x elapsed=0:00:23.73    frame= 3345 fps=138 q=-0.0 size=    6144KiB time=00:02:18.81 bitrate= 362.6kbits/s speed=5.73x elapsed=0:00:24.24    frame= 3413 fps=138 q=-0.0 size=    6144KiB time=00:02:21.67 bitrate= 355.3kbits/s speed=5.72x elapsed=0:00:24.76    [h264 @ 000002356fce9fc0] Late SEI is not implemented. Update your FFmpeg version to the newest one from Git. If the problem still occurs, it means that your file has a feature which has not been implemented.
+[h264 @ 000002356fce9fc0] If you want to help, upload a sample of this file to https://streams.videolan.org/upload/ and contact the ffmpeg-devel mailing list. (ffmpeg-devel@ffmpeg.org)
+frame= 3480 fps=138 q=-0.0 size=    6400KiB time=00:02:24.42 bitrate= 363.0kbits/s speed=5.71x elapsed=0:00:25.27    frame= 3550 fps=138 q=-0.0 size=    6400KiB time=00:02:27.36 bitrate= 355.8kbits/s speed=5.71x elapsed=0:00:25.79    [h264 @ 000002356f9107c0] Late SEI is not implemented. Update your FFmpeg version to the newest one from Git. If the problem still occurs, it means that your file has a feature which has not been implemented.
+[h264 @ 000002356f9107c0] If you want to help, upload a sample of this file to https://streams.videolan.org/upload/ and contact the ffmpeg-devel mailing list. (ffmpeg-devel@ffmpeg.org)
+frame= 3618 fps=138 q=-0.0 size=    6656KiB time=00:02:30.20 bitrate= 363.0kbits/s speed=5.71x elapsed=0:00:26.30    frame= 3700 fps=138 q=-0.0 size=    6912KiB time=00:02:33.65 bitrate= 368.5kbits/s speed=5.73x elapsed=0:00:26.82    [h264 @ 000002356fce8980] Late SEI is not implemented. Update your FFmpeg version to the newest one from Git. If the problem still occurs, it means that your file has a feature which has not been implemented.
+[h264 @ 000002356fce8980] If you want to help, upload a sample of this file to https://streams.videolan.org/upload/ and contact the ffmpeg-devel mailing list. (ffmpeg-devel@ffmpeg.org)
+frame= 3774 fps=138 q=-0.0 size=    6912KiB time=00:02:36.70 bitrate= 361.3kbits/s speed=5.73x elapsed=0:00:27.33    frame= 3855 fps=138 q=-0.0 size=    7168KiB time=00:02:40.07 bitrate= 366.8kbits/s speed=5.75x elapsed=0:00:27.85    [h264 @ 000002356fe34080] Late SEI is not implemented. Update your FFmpeg version to the newest one from Git. If the problem still occurs, it means that your file has a feature which has not been implemented.
+[h264 @ 000002356fe34080] If you want to help, upload a sample of this file to https://streams.videolan.org/upload/ and contact the ffmpeg-devel mailing list. (ffmpeg-devel@ffmpeg.org)
+frame= 3934 fps=139 q=-0.0 size=    7168KiB time=00:02:43.36 bitrate= 359.4kbits/s speed=5.76x elapsed=0:00:28.36    frame= 4004 fps=139 q=-0.0 size=    7424KiB time=00:02:46.83 bitrate= 364.5kbits/s speed=5.78x elapsed=0:00:28.88    [h264 @ 000002356fedc240] Late SEI is not implemented. Update your FFmpeg version to the newest one from Git. If the problem still occurs, it means that your file has a feature which has not been implemented.
+[h264 @ 000002356fedc240] If you want to help, upload a sample of this file to https://streams.videolan.org/upload/ and contact the ffmpeg-devel mailing list. (ffmpeg-devel@ffmpeg.org)
+frame= 4068 fps=138 q=-0.0 size=    7424KiB time=00:02:49.48 bitrate= 358.8kbits/s speed=5.77x elapsed=0:00:29.39    frame= 4136 fps=138 q=-0.0 size=    7680KiB time=00:02:51.77 bitrate= 366.3kbits/s speed=5.74x elapsed=0:00:29.91    [h264 @ 000002356fce9840] Late SEI is not implemented. Update your FFmpeg version to the newest one from Git. If the problem still occurs, it means that your file has a feature which has not been implemented.
+[h264 @ 000002356fce9840] If you want to help, upload a sample of this file to https://streams.videolan.org/upload/ and contact the ffmpeg-devel mailing list. (ffmpeg-devel@ffmpeg.org)
+frame= 4203 fps=138 q=-0.0 size=    7680KiB time=00:02:54.66 bitrate= 360.2kbits/s speed=5.74x elapsed=0:00:30.42    frame= 4272 fps=138 q=-0.0 size=    7936KiB time=00:02:57.59 bitrate= 366.1kbits/s speed=5.74x elapsed=0:00:30.94    frame= 4347 fps=138 q=-0.0 size=    7936KiB time=00:03:00.57 bitrate= 360.0kbits/s speed=5.74x elapsed=0:00:31.45    [out#0/ogg @ 000002356fe66140] video:4476KiB audio:3739KiB subtitle:0KiB other streams:0KiB global headers:7KiB muxing overhead: 0.881943%
+frame= 4396 fps=138 q=-0.0 Lsize=    8287KiB time=00:03:03.16 bitrate= 370.6kbits/s speed=5.76x elapsed=0:00:31.81
+
+RETURN_CODE: 0
+
+[2026-01-05T09:11:35+01:00] Conversion successful: output=converted/695b721777ef1_converted.ogg

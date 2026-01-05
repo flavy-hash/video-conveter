@@ -1,0 +1,4 @@
+[2026-01-05T09:09:51+01:00] Error: Invalid file type. Allowed types: mp4, avi, mov, wmv, flv, mkv, webm
+Trace: #0 C:\Users\hp\video-conveter\VideoToAudioConverter.php(35): VideoToAudioConverter->validateFile(Array)
+#1 C:\Users\hp\video-conveter\convert.php(34): VideoToAudioConverter->convert(Array, 'm4a')
+#2 {main}
